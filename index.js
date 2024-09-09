@@ -11,10 +11,11 @@ let bodyParser= require("body-parser");
 let app= express();
 app.use(cors());
 app.use(bodyParser.json());
-app.listen('8080',()=>{
-    console.log("connect with server 8080");
-});
+let port= 8080;
 
+app.listen(port,function(){
+    console.log("server working on port ", port);
+});
 
 
 main()
